@@ -267,7 +267,7 @@ def upload_page():
         
         with col1:
             image = Image.open(uploaded_file)
-            st.image(image, caption="Uploaded Label", use_container_width=True)
+            st.image(image, caption="Uploaded Label", width=500)
         
         with col2:
             st.info("Image Details:")
@@ -337,7 +337,7 @@ def grid_view():
                 
                 # Display image
                 image = Image.open(img_path)
-                st.image(image, caption=img_file, use_container_width=True)
+                st.image(image, caption=img_file, width=500)
                 
                 # Display basic analysis
                 try:
@@ -374,7 +374,7 @@ def detailed_view():
     with col1:
         img_path = os.path.join("processed", selected_image)
         image = Image.open(img_path)
-        st.image(image, caption=selected_image, use_container_width=True)
+        st.image(image, caption=selected_image, width=500)
     
     with col2:
         json_path = os.path.join("processed", f"{selected_image}_analysis.json")
